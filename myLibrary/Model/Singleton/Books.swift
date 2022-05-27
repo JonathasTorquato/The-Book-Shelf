@@ -21,11 +21,11 @@ class Books {
     var books : BehaviorRelay <[Book]> = BehaviorRelay(value: [])
     
     fileprivate init(){
-        
+        //Para completar a abstração de Singleton, a utilização de um inicializador privado para que quem for utilizar a classe não crie uma nova instancia sem querer
     }
     
     
-    fileprivate func savePlist(_ booksArray : [Book]) ->  Result<String, BookError>{
+    fileprivate func savePlist(_ booksArray : [Book]) ->  Result<String, BookError> {
         guard let dataPath = self.dataPath else {return .failure(BookError.internalError)}
         do {
             let encoder = PropertyListEncoder()
