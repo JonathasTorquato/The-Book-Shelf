@@ -11,13 +11,19 @@ import RxRelay
 
 class Books {
     
-    static var book : Books = Books()
+    static var book : Books = {
+        let book = Books()
+        book.retrievePlist()
+        return book
+    }()
     let dataPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Books.plist")
+    
     var books : BehaviorRelay <[Book]> = BehaviorRelay(value: [])
     
-    init(){
-        self.retrievePlist()
+    fileprivate init(){
+        
     }
+    
     
     fileprivate func savePlist(_ booksArray : [Book]) ->  Result<String, BookError>{
         guard let dataPath = self.dataPath else {return .failure(BookError.internalError)}
