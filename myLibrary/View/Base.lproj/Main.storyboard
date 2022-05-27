@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PID-Au-hAc">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myLibrary" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="m1r-ft-QAm">
+                                <rect key="frame" x="40.5" y="296" width="333" height="358"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="I7L-QN-eYR">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="179"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UzW-h8-MQc">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="124"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3YV-ln-CPo">
+                                                <rect key="frame" x="0.0" y="124" width="333" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Vhx-AM-dH2"/>
+                                                </constraints>
+                                                <color key="tintColor" name="BrownLogo"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Registrar novo livro">
+                                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapRegister:" destination="BYZ-38-t0r" eventType="touchUpInside" id="94t-Ab-yY8"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mmz-nk-HHc">
+                                                <rect key="frame" x="0.0" y="174" width="333" height="5"/>
+                                                <color key="backgroundColor" name="BrownLogo"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="uUO-gq-2wF"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CXe-at-puL">
+                                        <rect key="frame" x="0.0" y="179" width="333" height="179"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XBq-p2-ccj">
+                                                <rect key="frame" x="0.0" y="0.0" width="333" height="124"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JqH-mQ-PVj">
+                                                <rect key="frame" x="0.0" y="124" width="333" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="RtP-0b-zl7"/>
+                                                </constraints>
+                                                <color key="tintColor" name="BrownLogo"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Encontrar livro">
+                                                    <fontDescription key="titleFontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="30"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didTapFindBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GV7-9u-hQF"/>
+                                                </connections>
+                                            </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfl-kW-X4R">
+                                                <rect key="frame" x="0.0" y="174" width="333" height="5"/>
+                                                <color key="backgroundColor" name="BrownLogo"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="5" id="i35-s4-rFf"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="book shelF" translatesAutoresizingMaskIntoConstraints="NO" id="564-CZ-Fwm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="208"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m1r-ft-QAm" firstAttribute="top" secondItem="564-CZ-Fwm" secondAttribute="bottom" id="ZQo-up-Yik"/>
+                            <constraint firstItem="m1r-ft-QAm" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="cie-21-NI4"/>
+                            <constraint firstItem="564-CZ-Fwm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gUY-cn-S6K"/>
+                            <constraint firstItem="564-CZ-Fwm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mV9-4K-uxK"/>
+                            <constraint firstItem="m1r-ft-QAm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="oFR-Nb-j56"/>
+                            <constraint firstItem="m1r-ft-QAm" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="rEq-XH-5ml"/>
+                            <constraint firstItem="564-CZ-Fwm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="x53-Zj-HSL"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="uZu-Kx-m9B"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="915.94202898550736" y="61.607142857142854"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZJJ-AU-Sap">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PID-Au-hAc" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xWA-3E-0iz">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="VFQ-Li-xdS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v5o-KL-GWA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5.7971014492753632" y="61.607142857142854"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="book shelF" width="166.5" height="166.5"/>
+        <namedColor name="BrownLogo">
+            <color red="0.59215686274509804" green="0.44705882352941179" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

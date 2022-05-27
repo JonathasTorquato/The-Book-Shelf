@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BookDetailsViewController" customModule="myLibrary" customModuleProvider="target">
+            <connections>
+                <outlet property="authorLabel" destination="oRi-r9-Jbw" id="kKa-wn-BtY"/>
+                <outlet property="deleteButton" destination="DxZ-lk-Xic" id="JxV-Es-ByA"/>
+                <outlet property="editButton" destination="vQx-dn-VHM" id="CUA-xS-wC2"/>
+                <outlet property="knowledgeAreaLabel" destination="Qqm-14-l5C" id="qV1-DN-DI5"/>
+                <outlet property="titleLabel" destination="0fK-6g-6Yh" id="5Da-B2-A4S"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XiG-vg-0SY">
+                    <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIe-fh-xMj">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aNz-46-tcO">
+                                    <rect key="frame" x="16" y="0.0" width="382" height="207"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Título do livro" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0fK-6g-6Yh">
+                                            <rect key="frame" x="0.0" y="0.0" width="382" height="29"/>
+                                            <fontDescription key="fontDescription" name="AmericanTypewriter-Semibold" family="American Typewriter" pointSize="25"/>
+                                            <color key="textColor" name="RedLogo"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Autor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRi-r9-Jbw">
+                                            <rect key="frame" x="0.0" y="45" width="382" height="23"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                            <color key="textColor" name="BrownLogo"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Área do conhecimento" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqm-14-l5C">
+                                            <rect key="frame" x="0.0" y="84" width="382" height="17"/>
+                                            <fontDescription key="fontDescription" name="CourierNewPSMT" family="Courier New" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vQx-dn-VHM">
+                                            <rect key="frame" x="0.0" y="117" width="382" height="37"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Editar">
+                                                <fontDescription key="titleFontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                                <color key="baseForegroundColor" name="BlueLogo"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="didTapEdit:" destination="-1" eventType="touchUpInside" id="xZF-f6-HT7"/>
+                                            </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxZ-lk-Xic">
+                                            <rect key="frame" x="0.0" y="170" width="382" height="37"/>
+                                            <color key="tintColor" name="BlueLogo"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="filled" title="Deletar">
+                                                <fontDescription key="titleFontDescription" name="CourierNewPSMT" family="Courier New" pointSize="20"/>
+                                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                                <color key="baseBackgroundColor" name="RedLogo"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="didTpDelete:" destination="-1" eventType="touchUpInside" id="Qco-aX-x3N"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="aNz-46-tcO" secondAttribute="trailing" constant="16" id="0EY-3I-xXH"/>
+                                <constraint firstAttribute="bottom" secondItem="aNz-46-tcO" secondAttribute="bottom" id="8ja-l1-LLl"/>
+                                <constraint firstItem="aNz-46-tcO" firstAttribute="leading" secondItem="AIe-fh-xMj" secondAttribute="leading" constant="16" id="eU2-Rk-2x7"/>
+                                <constraint firstItem="aNz-46-tcO" firstAttribute="top" secondItem="AIe-fh-xMj" secondAttribute="top" id="oth-jG-3o7"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="AIe-fh-xMj" firstAttribute="top" secondItem="XiG-vg-0SY" secondAttribute="top" id="31h-Ho-wrp"/>
+                        <constraint firstAttribute="bottom" secondItem="AIe-fh-xMj" secondAttribute="bottom" priority="250" id="3Fu-j2-MfC"/>
+                        <constraint firstItem="AIe-fh-xMj" firstAttribute="width" secondItem="XiG-vg-0SY" secondAttribute="width" id="4m5-8V-CgW"/>
+                        <constraint firstItem="AIe-fh-xMj" firstAttribute="leading" secondItem="XiG-vg-0SY" secondAttribute="leading" id="KMf-G0-y0u"/>
+                        <constraint firstAttribute="trailing" secondItem="AIe-fh-xMj" secondAttribute="trailing" id="bDI-aa-8l8"/>
+                        <constraint firstItem="AIe-fh-xMj" firstAttribute="height" relation="lessThanOrEqual" secondItem="XiG-vg-0SY" secondAttribute="height" id="gPI-53-4Gh"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="XiG-vg-0SY" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="FCQ-KY-Yso"/>
+                <constraint firstItem="XiG-vg-0SY" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="L6v-ng-reI"/>
+                <constraint firstItem="XiG-vg-0SY" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" id="Ue7-wA-K3X"/>
+                <constraint firstItem="XiG-vg-0SY" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="wQA-ac-SWb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="139" y="145"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="BlueLogo">
+            <color red="0.59607843137254901" green="0.83137254901960789" blue="0.88235294117647056" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BrownLogo">
+            <color red="0.59215686274509804" green="0.44705882352941179" blue="0.2627450980392157" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedLogo">
+            <color red="0.87058823529411766" green="0.49411764705882355" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
