@@ -49,11 +49,11 @@ class BookDetailsViewController: UIViewController {
         let vc = RegisterViewController()
         vc.modalTransitionStyle = .partialCurl
         self.navigationController?.pushViewController(vc, animated: true)
-        do{vc.book.onNext(try self.book.value())}
+        do{vc.viewModel.book.onNext(try self.book.value())}
         catch{
             print(error)
         }
-        vc.book.subscribe(onNext: { [weak self] item in
+        vc.viewModel.book.subscribe(onNext: { [weak self] item in
             self?.book.onNext(item)
             
         }).disposed(by: bag)

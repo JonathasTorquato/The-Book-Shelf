@@ -75,7 +75,7 @@ class Books {
         if self.containBook(book) {
             var newArray = self.books.value
             
-            newArray.removeAll { return $0.name == book.name }
+            newArray.removeAll { return $0.name.lowercased() == book.name.lowercased() && book.author.lowercased() == $0.author.lowercased() && ($0.knowledgeArea?.lowercased() ?? "") == (book.knowledgeArea?.lowercased() ?? "") }
             return self.savePlist(newArray)
         }
         return .failure(BookError.bookNotFound)

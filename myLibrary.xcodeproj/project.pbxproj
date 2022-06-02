@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C210C2792847A22E000056B1 /* AbstractFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C210C2782847A22E000056B1 /* AbstractFactory.swift */; };
+		C210C27C2847A2C9000056B1 /* AbstractBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = C210C27B2847A2C9000056B1 /* AbstractBook.swift */; };
+		C210C27E2847A340000056B1 /* BookFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C210C27D2847A340000056B1 /* BookFactory.swift */; };
 		C224C83A283FAF630039B9E3 /* FindBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224C838283FAF630039B9E3 /* FindBookTableViewCell.swift */; };
 		C224C83B283FAF630039B9E3 /* FindBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C224C839283FAF630039B9E3 /* FindBookTableViewCell.xib */; };
 		C27F8FF8283CF60C008E0CF7 /* FindBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C27F8FF6283CF60B008E0CF7 /* FindBookViewController.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C210C2782847A22E000056B1 /* AbstractFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractFactory.swift; sourceTree = "<group>"; };
+		C210C27B2847A2C9000056B1 /* AbstractBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractBook.swift; sourceTree = "<group>"; };
+		C210C27D2847A340000056B1 /* BookFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookFactory.swift; sourceTree = "<group>"; };
 		C224C838283FAF630039B9E3 /* FindBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindBookTableViewCell.swift; sourceTree = "<group>"; };
 		C224C839283FAF630039B9E3 /* FindBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FindBookTableViewCell.xib; sourceTree = "<group>"; };
 		C27F8FF6283CF60B008E0CF7 /* FindBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindBookViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +71,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C210C27A2847A2B7000056B1 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				C210C2782847A22E000056B1 /* AbstractFactory.swift */,
+				C210C27B2847A2C9000056B1 /* AbstractBook.swift */,
+				C210C27D2847A340000056B1 /* BookFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		C27F9001283D40FC008E0CF7 /* cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +103,7 @@
 			children = (
 				C2AEA6DA283BEFD7002BB680 /* Singleton */,
 				C284F200283E4D4000226874 /* Book.swift */,
+				C210C27A2847A2B7000056B1 /* Factory */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,15 +246,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C210C2792847A22E000056B1 /* AbstractFactory.swift in Sources */,
 				C2AEA6E0283BFDB3002BB680 /* RegisteBookViewModel.swift in Sources */,
 				C2AEA6DC283BEFE8002BB680 /* Books.swift in Sources */,
 				C27F9000283D1155008E0CF7 /* FindBookViewModel.swift in Sources */,
+				C210C27C2847A2C9000056B1 /* AbstractBook.swift in Sources */,
 				C224C83A283FAF630039B9E3 /* FindBookTableViewCell.swift in Sources */,
 				C284F201283E4D4000226874 /* Book.swift in Sources */,
 				C27F8FF8283CF60C008E0CF7 /* FindBookViewController.swift in Sources */,
 				C2F76E452837B7C500D7956D /* ViewController.swift in Sources */,
 				C2BE0784283F9E74006C7C93 /* BookDetailsViewController.swift in Sources */,
 				C2F76E412837B7C500D7956D /* AppDelegate.swift in Sources */,
+				C210C27E2847A340000056B1 /* BookFactory.swift in Sources */,
 				C2F76E432837B7C500D7956D /* SceneDelegate.swift in Sources */,
 				C2AEDA312837FDCC0058B99D /* RegisterViewController.swift in Sources */,
 			);

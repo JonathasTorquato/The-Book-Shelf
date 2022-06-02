@@ -17,7 +17,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var nameTextField: UITextField!
     
     let bag = DisposeBag()
-    let book : BehaviorSubject<Book> = BehaviorSubject(value: Book(name: "", author: ""))
+    
     
     let viewModel = RegisterBookViewModel()
     var textFields : [UITextField] = []
@@ -32,7 +32,7 @@ class RegisterViewController: UIViewController {
             self.saveButton.isEnabled = (aText != nil && aText! != "" && nText != nil && nText! != "")
         }).disposed(by: bag)
         
-        book.subscribe(onNext: { item in
+        self.viewModel.book.subscribe(onNext: { item in
             self.knowledgeTextField.text = item.knowledgeArea
             self.nameTextField.text = item.name
             self.authorTextField.text = item.author
@@ -66,12 +66,9 @@ class RegisterViewController: UIViewController {
     @IBAction func didTapSave(_ sender: UIButton) {
         do {
             if let name = self.nameTextField.text, let author = self.authorTextField.text, self.authorTextField.hasText && self.nameTextField.hasText{
-                let book = Book(name: name, author: author, knowledgeArea: self.knowledgeTextField.text)
-                switch viewModel.saveBook(book){
+                switch viewModel.saveBook(bookName: name, authorName: author, knowledgeArea: self.knowledgeTextField.text){
                 case .success(let string):
-                    if try self.book.value().name != ""{
-                        _ = viewModel.deleteBook(try self.book.value())
-                        self.book.onNext(book)
+                    if try self.viewModel.book.value().name != ""{
                         self.navigationController?.popViewController(animated: true)
                     }else{
                         self.presentAlert(title: "Sucesso!", message: string, buttonMessage: "OK")

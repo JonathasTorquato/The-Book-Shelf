@@ -8,8 +8,15 @@
 import Foundation
 
 
-struct Book : Codable {
-    var name : String
-    var author : String
+class Book : AbstractBook {
+    var author: String
+    
+    var name: String
+    
     var knowledgeArea: String?
+    init(name: String, author: String, knowledgeArea: String? = nil){
+        self.name = name
+        self.author = author
+        self.knowledgeArea = knowledgeArea
+    }
 }
